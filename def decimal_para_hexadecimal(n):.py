@@ -1,20 +1,19 @@
-def decimal_para_hexadecimal(n):
-    simbolos_hex = '0123456789ABCDEF'
-   
-    if n == 0:
-        return '0'
-
-    resultado = ''
-   
-    while n > 0:
-        resto = n % 16
-        resultado = simbolos_hex[resto] + resultado
-        n = n // 16
-   
-    return resultado
-
-numero_decimal = int(input("Digite um número decimal: "))
-
-numero_hexadecimal = decimal_para_hexadecimal(numero_decimal)
-
-print(f"O número {numero_decimal} em hexadecimal: {numero_hexadecimal}")
+print("Conversor decimal para hexadecimal") num = int(input("Digite um Número Decimal = ")) res_H = ""
+if num == 0: 
+res_H = "0"
+else: 
+num_D = num
+while num_D > 0:
+resto = num_D % 16
+num_D = num_D // 16 
+if resto < 10:
+res_H = str(resto) + res_H
+elif resto == 10:
+res_H = "A" + res_H
+elif resto == 11:
+res_H = 'B' + res_H
+elif resto == 12: res_H =
+'C' + res_H elif resto == 13: res_H = 'D' + res_H
+elif resto == 14: res_H == 'E' + res_H
+elif resto == 15: res_H = 'F' + res_H 
+else: res_H = "" print(f"O valor '{num}' em hexadecimal corresponde à: {res_H}!")
